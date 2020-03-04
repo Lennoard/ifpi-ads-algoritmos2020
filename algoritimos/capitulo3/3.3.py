@@ -5,10 +5,16 @@ def do_four(f):
     f()
 
 def print_linha_regular():
-    print('|         |         |')
+    print('|', end = ' ')
+    print(' ' * 7, end = ' ')
+    print('|', end = ' ')
+    print(' ' * 7, end = ' ')
+    print('|')
 
 def print_linha_divisora():
-    print('+ - - - - + - - - - +')
+    print('+', '- ' * 4, end = '')
+    print('+', '- ' * 4, end = '')
+    print('+')
 
 def desenhar_grade():
     print_linha_divisora()
