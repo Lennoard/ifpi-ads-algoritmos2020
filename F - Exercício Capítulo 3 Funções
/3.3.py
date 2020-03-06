@@ -5,15 +5,14 @@ def do_four(f):
     f()
 
 def print_linha_regular():
-    print('|', end = ' ')
-    print(' ' * 7, end = ' ')
-    print('|', end = ' ')
-    print(' ' * 7, end = ' ')
+    for _ in range(4):
+        print('|', end = ' ')
+        print(' ' * 7, end = ' ')
     print('|')
 
 def print_linha_divisora():
-    print('+', '- ' * 4, end = '')
-    print('+', '- ' * 4, end = '')
+    for _ in range(4):
+        print('+', '- ' * 4, end = '')
     print('+')
 
 def desenhar_grade():
