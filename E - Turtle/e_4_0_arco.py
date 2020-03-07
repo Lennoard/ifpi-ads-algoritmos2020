@@ -30,7 +30,6 @@ def arc(t, r, angle):
         t.fd(arco / n)
         t.lt(angle / n)
 
-
 def main():
     bob = turtle.Turtle()
     #square(bob, 45)
@@ -40,4 +39,4 @@ def main():
     arc(bob, 80, 270)
     turtle.mainloop()
 
-main()
+# main()
