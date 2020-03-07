@@ -25,10 +25,10 @@ def arc(t, r, angle):
     #  angle        arco
 
     arco = c * (angle / 360)
-    for _ in range(angle):
-        n = int(arco / 3) + 1
-        t.fd(arco / angle)
-        t.lt()
+    n = int(arco)
+    for _ in range(n):
+        t.fd(arco / n)
+        t.lt(angle / n)
 
 
 def main():
@@ -37,7 +37,7 @@ def main():
     #polygon(bob, .68, 200)
     #circle(bob, 50)
 
-    arc(bob, 120, 180)
+    arc(bob, 80, 270)
     turtle.mainloop()
 
 main()
