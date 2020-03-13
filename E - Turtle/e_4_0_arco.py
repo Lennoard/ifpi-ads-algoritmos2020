@@ -39,4 +39,4 @@ def main():
     arc(bob, 80, 270)
     turtle.mainloop()
 
-# main()
+main()
