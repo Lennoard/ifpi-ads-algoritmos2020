@@ -5,6 +5,7 @@
 
 # Quem tem renda tributável de R$ 13.800,00 - paga quanto?]
 
+
 def calcular_imposto_new(renda):
     if renda < 3881.65:
         return 0
@@ -13,9 +14,10 @@ def calcular_imposto_new(renda):
     elif renda < 7654.67:
         return 15
     elif renda < 9564.42:
-        return 22,5
+        return 22.5
     else:
         return 27.5
+
 
 def calcular_imposto_old(renda):
     if renda < 1903.98:
@@ -51,8 +53,9 @@ def print_tabela(imposto):
 
     print(row2, row3, row4, row5, row6)
 
-def main():
-    renda = float(input('Insira a rua renda em R$: '))
+
+if __name__ == '__main__':
+    renda = float(input('Insira a sua renda em R$: '))
     
     imposto_new = calcular_imposto_new(renda)
     desconto_new = (renda * imposto_new) / 100
@@ -63,5 +66,3 @@ def main():
     print_tabela(imposto_old)
     print(f'Seu imposto atual é {imposto_old}%, (R$ {desconto_old})')
     print(f'Seu imposto na tabela corrigida é {imposto_new}%, (R$ {desconto_new})')
-    
-main()
