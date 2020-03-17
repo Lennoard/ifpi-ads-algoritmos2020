@@ -3,7 +3,7 @@
 # calcule e exiba qual o valor de imposto de renda real ele deverá pagar pela 
 # tabela atual sem correção e pela tabela corrigida. 
 
-# Quem tem renda tributável de R$ 13.800,00 - paga quanto?]
+# Quem tem renda tributável de R$ 13.800,00 - paga quanto?
 
 
 def calcular_imposto_new(renda):
@@ -30,6 +30,7 @@ def calcular_imposto_old(renda):
         return 22.5
     else:
         return 27.5
+
 
 def print_tabela(imposto):
     print('         FAIXA DE ISENÇÃO  |  TABELA ATUAL              |  TABELA CORRIGIDA')
