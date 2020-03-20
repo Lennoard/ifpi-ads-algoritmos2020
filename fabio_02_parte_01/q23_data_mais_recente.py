@@ -6,7 +6,7 @@ def data_para_dias(d, m, a):
     if d > 31 or d <= 0:
         raise ValueError('Dia inválido')
 
-    if d > 12 or m <= 0:
+    if m > 12 or m <= 0:
         raise ValueError('Mês inválido')
 
     if a <= 0:
