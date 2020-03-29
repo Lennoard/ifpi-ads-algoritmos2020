@@ -10,21 +10,18 @@ def tempo_passado(hi, hf, mi, mf):
 
     if (hi == hf) and (mf < mi):
         return f'23 horas e {minutos} minutos'
-    else:
-        return f'{horas} horas e {minutos} minutos'
+    return f'{horas} horas e {minutos} minutos'
 
 def horas_passadas(inicial, final):
     if (final < inicial):
         return (24 - inicial) + final
-    else:
-        return final - inicial
+    return final - inicial
 
 
 def minutos_passados(inicial, final):
     if (final < inicial):
         return (60 - inicial) + final
-    else:
-        return final - inicial
+    return final - inicial
 
 
 def main():
