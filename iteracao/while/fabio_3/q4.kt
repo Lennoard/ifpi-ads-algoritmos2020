@@ -11,6 +11,8 @@ fun main() {
     }
 }
 
-fun readInt(message: String): Int = print("$message ").run {
+private fun readInt(message: String): Int = print("$message ").run {
     readLine()!!.toInt()
 }
+
+
