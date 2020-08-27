@@ -14,5 +14,3 @@ fun main() {
 private fun readInt(message: String): Int = print("$message ").run {
     readLine()!!.toInt()
 }
-
-
