@@ -20,36 +20,51 @@ fun main() {
 
     var count = 0
     while (count < n) {
-        val partialWinner = votes.filter { it in 1..3 }.mostCommonElement()
+        //val partialWinner = votes.filter { it in 1..3 }.mostCommonElement()
 
         val vote = input("Insira o seu voto (1, 2, 3, 9 para nulo ou 0 para em branco)").toInt()
 
-        if (vote == 0) {
+        /*if (vote == 0) {
             partialWinner?.let {
                 println("Seu voto em branco irá para o candidato $partialWinner")
                 votes.add(partialWinner)
             }
-        }
+        }*/
         votes.add(vote)
         count++
     }
+
+    val resultsCandidates = listOf(
+        votes.filter { it == 1 }.size,
+        votes.filter { it == 2 }.size,
+        votes.filter { it == 3 }.size
+    )
 
     println("Candidato 1: ${votes.filter { it == 1 }.size} votos")
     println("Candidato 2: ${votes.filter { it == 2 }.size} votos")
     println("Candidato 3: ${votes.filter { it == 3 }.size} votos")
     println("Votos nulos: ${votes.filter { it == 9 }.size} votos")
     println("Votos em branco: ${votes.filter { it == 0 }.size} votos")
-    println("Vencedor: ${votes.mostCommonElement()}")
+
+    if (resultsCandidates.hasDuplicates()) {
+        println("Houve um empate!")
+    } else {
+        println("Vencedor: ${votes.mostCommonElement()}")
+    }
 }
 
 private fun <T> List<T>.mostCommonElement(): T? {
-    return groupBy { 
+    return groupBy {
         it
     }.mapValues {
         it.value.size
     }.maxBy {
         it.value
     }?.key
+}
+
+private fun <T> List<T>.hasDuplicates(): Boolean {
+    return size != distinct().size
 }
 
 private fun input(message: String): String = print("$message ").run {
